@@ -26,8 +26,14 @@ public class EmployeeController {
 	public String getEmployeeDetails(HttpServletRequest request,Model model){
 		employeeId = Integer.parseInt(request.getParameter("employeeId"));
 		EmployeeDetails employeeedit=employeeService.getEmployeeInformation(employeeId);
-		System.out.println("testing: "+employeeId);
-		return null;
-		
+		model.addAttribute("Employee", employeeedit);
+		return "EmployeeInformation";	
 	}
+	
+	@RequestMapping(value="/add")
+	public String addEmployee(){
+		System.out.println("adding Employee");
+		return null;
+	}
+	
 }	

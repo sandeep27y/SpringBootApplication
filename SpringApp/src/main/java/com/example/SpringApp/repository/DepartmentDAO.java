@@ -5,9 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.stereotype.Repository;
+
 import com.example.SpringApp.model.Department;
 import com.example.SpringApp.model.EmployeeDetails;
-
+@Repository
 public class DepartmentDAO {
 	PreparedStatement pStatement = null;
 	Connection con = DataBaseConnection.getConnection();

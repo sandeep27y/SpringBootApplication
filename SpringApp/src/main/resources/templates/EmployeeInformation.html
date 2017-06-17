@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+ 	<link rel = "stylesheet" type = "text/css" href = "Employee.css" />
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<p>Test</p>
+    <p th:text="${Employee.getEmployeeNo()}" />
+     <p th:text="${Employee.getFirstNAme()}" />
+      <p th:text="${Employee.getLastName()}" />
+       <p th:text="${Employee.getGender()}" />
+        <p th:text="${Employee.getHireDate()}" />
+         <p th:text="${Employee.getDeptname()}" />
+          <p th:text="${Employee.getSalary()}" />
+      
+<!--     <table border="1" align="center" class="table">
+	<tr align="center" th:each="smokeTest : ${Employee}">
+		<th>EmployeeId</th><th>EmployeeFirstName</th><th>EmployeeLastName</th><th>EmployeeGender</th>
+		<th>JoinDate</th><th>DepartmentName</th><th>MinSalary</th><th>Operations</th>		
+	</tr>
+	<tr class="info">
+		<td th:text="${smokeTest.getEmployeeNo()}"></td>
+	
+	</tr>
+</table> -->
+    
+</body>
+</html>

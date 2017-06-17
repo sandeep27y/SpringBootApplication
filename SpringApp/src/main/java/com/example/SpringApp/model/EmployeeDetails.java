@@ -3,7 +3,7 @@ package com.example.SpringApp.model;
 import java.sql.Date;
 
 public class EmployeeDetails {
-	private int employeeNo;
+	 int employeeNo;
 	private Date birthDate;
 	private String firstNAme;
 	private String lastName;
