@@ -29,7 +29,7 @@ public class EmployeeService {
 			employeeDetails.setFirstNAme(employee.getFirstName());
 			employeeDetails.setLastName(employee.getLastName());
 			employeeDetails.setGender(employee.getGender());
-			employeeDetails.setHireDate(employee.getHireDate());
+			//employeeDetails.setHireDate(employee.getHireDate());
 			employeeDetails.setSalary(salary.getSalary());
 			employeeDetails.setDeptname(department.getDepartmentName());
 			return employeeDetails;
@@ -46,7 +46,7 @@ public class EmployeeService {
 					return false;
 		}
 
-		public boolean addEmployeeInformation(EmployeeDetails employee2) {
+	/*	public boolean addEmployeeInformation(EmployeeDetails employee2) {
 			// TODO Auto-generated method stub
 			boolean EmployeeValidation = employeeDAO.addEmployeeInformation(employee2);
 			boolean SalaryValidation = salaryDAO.addSalaryInformation(employee2);
@@ -56,5 +56,9 @@ public class EmployeeService {
 				return true;
 			else
 				return false;
+		}*/
+		
+		public void addEmployee(Employee employee){
+			employeeDAO.addEmployee(employee);
 		}
 	}

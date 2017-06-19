@@ -76,4 +76,28 @@ public class EmployeeDAO {
 		}
 		return addEmployee;
 	}
+	
+	public boolean addEmployee(Employee employee){
+		ResultSet rs = null;
+		boolean addEmployee = false;
+		try{
+			pStatement = con.prepareStatement("INSERT INTO employees(emp_no, birth_date, first_name, last_name, gender, hire_date) VALUES (?, ?, ?, ?, ?, ?)");
+			pStatement.setInt(1, employee.getEmployeeNumber());
+			
+			
+			pStatement.setDate(2, new java.sql.Date(employee.getBirthDate().getTime()));
+			pStatement.setString(3, employee.getFirstName());
+			pStatement.setString(4, employee.getLastName());
+			pStatement.setString(5, employee.getGender());
+			pStatement.setDate(6, new java.sql.Date(employee.getHireDate().getTime()));
+			int x=pStatement.executeUpdate();
+			if(x>0)
+				addEmployee=true;
+			else
+				addEmployee=false;
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return addEmployee;
+	}
 }

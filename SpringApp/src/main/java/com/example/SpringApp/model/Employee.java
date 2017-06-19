@@ -1,6 +1,6 @@
 package com.example.SpringApp.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Employee {
 	private int employeeNumber;
@@ -9,6 +9,14 @@ public class Employee {
 	private String lastName;
 	private String gender;
 	private Date hireDate;
+	
+	public Employee(int employeeNumber, String firstName, String lastName, String gender) {
+		super();
+		this.employeeNumber = employeeNumber;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gender = gender;
+	}
 	public Employee(int employeeNumber, String firstName, String lastName, String gender,Date hireDate) {
 		super();
 		this.employeeNumber = employeeNumber;
@@ -16,6 +24,9 @@ public class Employee {
 		this.lastName = lastName;
 		this.gender = gender;
 		this.hireDate = hireDate;
+	}
+	public Employee() {
+		// TODO Auto-generated constructor stub
 	}
 	public int getEmployeeNumber() {
 		return employeeNumber;
